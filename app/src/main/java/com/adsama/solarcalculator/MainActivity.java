@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 onLocationChanged(locationResult.getLastLocation());
             }
         };
+        checkGpsAndSubscribeToLocation();
     }
 
     private void setOnClickListeners() {

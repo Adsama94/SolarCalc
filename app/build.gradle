@@ -3,6 +3,14 @@ apply plugin: 'io.fabric'
 apply plugin: 'com.google.gms.google-services'
 
 android {
+    signingConfigs {
+        releaseConfig {
+            storeFile file('/home/adsama/StudioProjects/SolarCalc/app/keyStore.jks')
+            storePassword 'android'
+            keyAlias = 'solarCalc'
+            keyPassword 'android'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
@@ -17,6 +25,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+            debuggable = true
         }
     }
     compileOptions {
