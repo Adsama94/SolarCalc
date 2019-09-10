@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/map_view"
+        layout="@layout/map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab_current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl_bottom"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_place" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_button_background">
+
+        <LinearLayout
+            android:id="@+id/ll_sun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/iv_sun"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="20"
+                android:src="@drawable/ic_sun_yellow" />
+
+            <ImageView
+                android:id="@+id/iv_sun_up"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_margin="12dp"
+                android:layout_weight="20"
+                android:src="@drawable/ic_sun_up_arrow" />
+
+            <TextView
+                android:id="@+id/tv_sun_up"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="20"
+                android:gravity="center_horizontal"
+                android:text="6:00 AM"
+                android:textColor="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/iv_sun_down"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_margin="12dp"
+                android:layout_weight="20"
+                android:src="@drawable/ic_arrow_downward"
+                android:tint="#555555" />
+
+            <TextView
+                android:id="@+id/tv_sun_down"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:layout_weight="20"
+                android:gravity="center_horizontal"
+                android:text="7:00 PM"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_moon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_sun"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/iv_moon"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="20"
+                android:src="@drawable/ic_moon" />
+
+            <ImageView
+                android:id="@+id/iv_moon_up"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_margin="12dp"
+                android:layout_weight="20"
+                android:src="@drawable/ic_sun_up_arrow"
+                android:tint="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_moon_up"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="20"
+                android:gravity="center_horizontal"
+                android:text="6:00 AM"
+                android:textColor="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/iv_moon_down"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_margin="12dp"
+                android:layout_weight="20"
+                android:src="@drawable/ic_arrow_downward"
+                android:tint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tv_moon_down"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:layout_weight="20"
+                android:gravity="center_horizontal"
+                android:text="7:00 PM"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_moon"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray">
+
+            <TextView
+                android:id="@+id/tv_current_date"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:text="Friday,13th Sep"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_day_previous"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_current_date"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/ic_previous" />
+
+            <ImageView
+                android:id="@+id/iv_day_current"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_current_date"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_current" />
+
+            <ImageView
+                android:id="@+id/iv_day_next"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_current_date"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/ic_next" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

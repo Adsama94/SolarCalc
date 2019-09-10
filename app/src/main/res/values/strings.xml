@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Solar Calculator</string>
+    <string name="save_current_location">Save current location</string>
+    <string name="saved_locations">Saved locations</string>
+    <string name="search_location">Search location</string>
+    <string name="search_hint">Search location…</string>
+    <string name="allow">ALLOW</string>
+    <string name="deny">DENY</string>
+    <string name="permission_location_rationale">We need your location to present accurate to results!</string>
+</resources>

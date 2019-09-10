@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "131962074732",
+    "firebase_url": "https://solarcalc-d3af8.firebaseio.com",
+    "project_id": "solarcalc-d3af8",
+    "storage_bucket": "solarcalc-d3af8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131962074732:android:11148867610b884e1f4a49",
+        "android_client_info": {
+          "package_name": "com.adsama.solarcalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131962074732-kectcv183c5vdstqvu05v91p85d8jves.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adsama.solarcalculator",
+            "certificate_hash": "76cf15a1b164d122f67cccc07318a81fa308f8d3"
+          }
+        },
+        {
+          "client_id": "131962074732-ebjuio4cs4veis1sohss1ie858c4di78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxolttT6-nAtif2ZPg5OtlLkVhGwR9mWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131962074732-ebjuio4cs4veis1sohss1ie858c4di78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
