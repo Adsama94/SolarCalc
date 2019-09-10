@@ -12,18 +12,6 @@
         android:layout_height="match_parent"
         android:layout_above="@id/rl_bottom" />
 
-    <com.github.clans.fab.FloatingActionButton
-        android:id="@+id/fab_current_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/rl_bottom"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/ic_place" />
-
     <RelativeLayout
         android:id="@+id/rl_bottom"
         android:layout_width="match_parent"
@@ -61,8 +49,8 @@
                 android:layout_gravity="center"
                 android:layout_weight="20"
                 android:gravity="center_horizontal"
-                android:text="6:00 AM"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                tools:text="6:00 AM" />
 
             <ImageView
                 android:id="@+id/iv_sun_down"
@@ -81,8 +69,8 @@
                 android:layout_margin="12dp"
                 android:layout_weight="20"
                 android:gravity="center_horizontal"
-                android:text="7:00 PM"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                tools:text="7:00 PM" />
 
         </LinearLayout>
 
@@ -118,8 +106,8 @@
                 android:layout_gravity="center"
                 android:layout_weight="20"
                 android:gravity="center_horizontal"
-                android:text="6:00 AM"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                tools:text="6:00 AM" />
 
             <ImageView
                 android:id="@+id/iv_moon_down"
@@ -138,8 +126,8 @@
                 android:layout_margin="12dp"
                 android:layout_weight="20"
                 android:gravity="center_horizontal"
-                android:text="7:00 PM"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                tools:text="7:00 PM" />
 
         </LinearLayout>
 
@@ -158,9 +146,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_margin="10dp"
                 android:gravity="center_horizontal"
-                android:text="Friday,13th Sep"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:text="Friday,13th Sep" />
 
             <ImageView
                 android:id="@+id/iv_day_previous"

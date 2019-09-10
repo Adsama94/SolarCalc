@@ -24,7 +24,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     buildTypes.each {
-        it.resValue 'String', 'GOOGLE_API_KEY', GOOGLE_API_KEY
+        it.resValue "string", 'GOOGLE_API_KEY', GOOGLE_API_KEY
     }
 }
 
@@ -49,4 +49,6 @@ dependencies {
     def room_version = "2.2.0-rc01"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
+    def work_version = "2.2.0"
+    implementation "androidx.work:work-runtime:$work_version"
 }

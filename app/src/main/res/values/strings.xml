@@ -7,4 +7,9 @@
     <string name="allow">ALLOW</string>
     <string name="deny">DENY</string>
     <string name="permission_location_rationale">We need your location to present accurate to results!</string>
+    <string name="golden_hour_begins">GOLDEN HOUR BEGINS!</string>
+    <string name="golden_hour_body">DON\'T MISS OUT ON THE OPPORTUNITY!</string>
+    <string name="golden_hour_action">golden_hour_action</string>
+    <string name="no_locations_stored">No locations stored!</string>
+    <string name="close">CLOSE</string>
 </resources>
