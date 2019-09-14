@@ -91,15 +91,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initViews();
-        setOnClickListeners();
-        if (!Places.isInitialized()) {
-            Places.initialize(this, getString(R.string.google_api_key));
-        }
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        if (mapFragment != null) {
-            mapFragment.getMapAsync(this);
-        }
         mLifecycleOwner = this;
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         mLocationRequest = new LocationRequest();
@@ -109,6 +100,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSolarMutableLiveData = new MutableLiveData<>();
         mLunarMutableLiveData = new MutableLiveData<>();
         mLocationRepository = new UserLocationRepository(getApplication());
+        initViews();
+        setOnClickListeners();
+        if (!Places.isInitialized()) {
+            Places.initialize(this, getString(R.string.google_api_key));
+        }
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        if (mapFragment != null) {
+            mapFragment.getMapAsync(this);
+        }
         MainActivityPermissionsDispatcher.initViewsWithPermissionCheck(this);
     }
 
@@ -173,13 +173,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
                     } else {
                         Log.d(LOG_TAG, "Current location is null. Using defaults.");
-                        Log.e(LOG_TAG, "Exception: %s", task.getException());
+                        Log.e(LOG_TAG, "Exception is ", task.getException());
                         map.getUiSettings().setMyLocationButtonEnabled(false);
                     }
                 });
             }
         } catch (SecurityException e) {
-            Log.e("Exception: %s", e.getMessage());
+            Log.e(LOG_TAG, "Security exception " + e.getMessage());
         }
     }
 
@@ -232,7 +232,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         updateLocationUI(googleMap);
         checkGpsAndSubscribeToLocation();
     }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
